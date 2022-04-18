@@ -1,24 +1,23 @@
 package com.example.as_lesson1;
 
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SecondAcivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Button button1 = (Button) findViewById(R.id.button_1);
-        button1.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.second_activity);
+        Button button3 = (Button) findViewById(R.id.button_3);
+        button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SecondAcivity.class);
+                Intent intent = new Intent(SecondAcivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });

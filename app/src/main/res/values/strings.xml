@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">AS_lesson1</string>
+    <string name="text">Случайный текст, размер 25sp, отступ 5dp,выравнивание сверху, по центру</string>
+    <string name="button_text_1">Кнопка поменьше</string>
+    <string name="button_text_2">Кнопка побольше</string>
+    <string name="switch_name1">Переключалка</string>
+    <string name="switch_name2">Переключалка 2</string>
+    <string name="simple_text">simple text?</string>
+    <string name="something">Это вообще зачем?</string>
+    <string name="come_back_to_start">Come back to start</string>
 </resources>
