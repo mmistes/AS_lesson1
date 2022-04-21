@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginTop="52dp"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +50,7 @@
 
     <LinearLayout
         android:id="@+id/input_field_1"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
         android:orientation="horizontal"
@@ -61,7 +62,7 @@
         app:layout_constraintVertical_chainStyle="packed">
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
@@ -70,7 +71,7 @@
             app:cornerRadius="8dp"/>
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
@@ -79,7 +80,7 @@
             app:cornerRadius="8dp" />
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
@@ -88,7 +89,7 @@
             app:cornerRadius="8dp"/>
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
@@ -100,7 +101,7 @@
 
     <LinearLayout
         android:id="@+id/input_field_2"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
         android:orientation="horizontal"
@@ -111,7 +112,7 @@
         app:layout_constraintTop_toBottomOf="@id/input_field_1">
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
@@ -120,7 +121,7 @@
             app:cornerRadius="8dp"/>
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
@@ -129,7 +130,7 @@
             app:cornerRadius="8dp"/>
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
@@ -138,7 +139,7 @@
             app:cornerRadius="8dp"/>
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
@@ -150,7 +151,7 @@
 
     <LinearLayout
         android:id="@+id/input_field_3"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
         android:orientation="horizontal"
@@ -161,7 +162,7 @@
         app:layout_constraintTop_toBottomOf="@id/input_field_2">
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
@@ -170,7 +171,7 @@
             app:cornerRadius="8dp"/>
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
@@ -179,7 +180,7 @@
             app:cornerRadius="8dp"/>
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
@@ -188,7 +189,7 @@
             app:cornerRadius="8dp"/>
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
@@ -200,7 +201,7 @@
 
     <LinearLayout
         android:id="@+id/input_field_4"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
         android:orientation="horizontal"
@@ -211,7 +212,7 @@
         app:layout_constraintTop_toBottomOf="@id/input_field_3">
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
@@ -220,7 +221,7 @@
             app:cornerRadius="8dp"/>
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
@@ -229,7 +230,7 @@
             app:cornerRadius="8dp"/>
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
@@ -238,7 +239,7 @@
             app:cornerRadius="8dp"/>
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             android:layout_weight="1"
