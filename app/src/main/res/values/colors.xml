@@ -7,4 +7,17 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="num_button_color">#4DD0E1</color>
+    <color name="operation_button_color">#4DB6AC</color>
+    <color name="field_1_color">#4DD0E1</color>
+    <color name="field_2_color">#4FC3F7</color>
+    <color name="field_3_color">#42A5F5</color>
+
+    <color name="num_button_color_night">#1E3638</color>
+    <color name="operation_button_color_night">#274F4B</color>
+    <color name="field_1_color_night">#1F2B35</color>
+    <color name="field_2_color_night">#2F4A54</color>
+    <color name="field_3_color_night">#1E3638</color>
+
 </resources>
