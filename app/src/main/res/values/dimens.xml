@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_corner_radius">8dp</dimen>
+    <dimen name="horizontal_margin_button">4dp</dimen>
+    <dimen name="horizontal_margin_layout">8dp</dimen>
+    <dimen name="land_field_size">450dp</dimen>
+    <dimen name="entering_num_size">36sp</dimen>
+    <dimen name="operator_size">28sp</dimen>
+</resources>

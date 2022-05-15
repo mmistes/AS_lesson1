@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/calc_background_2_vertical">
+    android:background="@drawable/calc_background_2_horizontal">
 
     <LinearLayout
         android:id="@+id/output_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:gravity="center"
         android:orientation="vertical"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,7 +18,7 @@
 
         <TextView
             android:id="@+id/result_field"
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/land_field_size"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/horizontal_margin_button"
             android:background="@color/field_3_color"
@@ -28,17 +28,18 @@
 
         <TextView
             android:id="@+id/operation_field"
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/land_field_size"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/horizontal_margin_button"
             android:background="@color/field_2_color"
+
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="@dimen/operator_size" />
 
         <EditText
             android:id="@+id/entry_field"
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/land_field_size"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/horizontal_margin_button"
             android:background="@color/field_1_color"
@@ -53,14 +54,14 @@
         android:id="@+id/actions_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
 
-        app:layout_constraintBottom_toTopOf="@id/input_field_1"
-        app:layout_constraintStart_toStartOf="@+id/input_field_1"
-        app:layout_constraintTop_toBottomOf="@id/output_field"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/input_field_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/output_field">
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/button_clear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -92,11 +93,9 @@
         android:layout_marginHorizontal="@dimen/horizontal_margin_layout"
         android:orientation="horizontal"
 
-        app:layout_constraintBottom_toTopOf="@id/input_field_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/actions_field"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintTop_toBottomOf="@+id/output_field">
 
         <Button
             android:id="@+id/button_seven"
