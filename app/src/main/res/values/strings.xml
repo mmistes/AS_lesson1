@@ -19,4 +19,11 @@
     <string name="clear">C</string>
     <string name="backspace">⌫</string>
     <string name="start_number">0</string>
+    <string name="go_to_light">Go to Light</string>
+    <string name="go_to_night">Go to Night</string>
+    <string name="theme">theme</string>
+    <string name="Light_theme">Светлая тема</string>
+    <string name="Dark_theme">Тёмная тема</string>
+    <string name="btn_back">Назад</string>
+
 </resources>

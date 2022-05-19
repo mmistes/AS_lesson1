@@ -2,21 +2,49 @@ package com.example.as_lesson1;
 
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+import java.io.Serializable;
+
+public class MainActivity extends AppCompatActivity implements Serializable {
 
     EditText entryField;
     TextView operationField;
     TextView resultField;
     String firstNumber;
 
+    private static String keyFields1 = "Fields1";
+    private static String keyFields2 = "Fields2";
+    private static String keyFields3 = "Fields3";
+    private static String keyFields4 = "Fields4";
+
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+        outState.putString(keyFields1, String.valueOf(entryField));
+        outState.putString(keyFields2, String.valueOf(operationField));
+        outState.putString(keyFields3, String.valueOf(resultField));
+        outState.putString(keyFields4, String.valueOf(firstNumber));
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        keyFields1 = savedInstanceState.getString(String.valueOf(entryField));
+        keyFields2 = savedInstanceState.getString(String.valueOf(operationField));
+        keyFields3 = savedInstanceState.getString(String.valueOf(resultField));
+        keyFields4 = savedInstanceState.getString(String.valueOf(firstNumber));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -163,38 +191,51 @@ public class MainActivity extends AppCompatActivity {
         String secondNumber = entryField.getText().toString();
         Double result = 0.0;
 
-            switch (operationField.getText().toString()) {
-                case "÷":
-                    fieldsNotNull();
+        switch (operationField.getText().toString()) {
+            case "÷":
+                if (fieldsNotNull()) {
+
+                } else {
                     result = Double.parseDouble(firstNumber) / Double.parseDouble(secondNumber);
-                    break;
-                case "*":
-                    fieldsNotNull();
+                }
+                break;
+            case "*":
+                if (fieldsNotNull()) {
+
+                } else {
                     result = Double.parseDouble(firstNumber) * Double.parseDouble(secondNumber);
-                    break;
-                case "+":
-                    fieldsNotNull();
+                }
+                break;
+            case "+":
+                if (fieldsNotNull()) {
+
+                } else {
                     result = Double.parseDouble(firstNumber) + Double.parseDouble(secondNumber);
-                    break;
-                case "-":
-                    fieldsNotNull();
+                }
+                break;
+            case "-":
+                if (fieldsNotNull()) {
+
+                } else {
                     result = Double.parseDouble(firstNumber) - Double.parseDouble(secondNumber);
-                    break;
-            }
-            resultField.setText(String.valueOf(result));
-            operationField.setText("=");
-            entryField.setText("");
+                }
+                break;
+        }
+        resultField.setText(String.valueOf(result));
+        operationField.setText("=");
+        entryField.setText("");
 
     }
 
-    public  void fieldsNotNull (){
-        if (entryField.getText().toString() == null || resultField.getText().toString() == null)
-        {
+    public boolean fieldsNotNull() {
+        if (entryField.getText().toString() == null || resultField.getText().toString() == null) {
             resultField.setText("0");
             entryField.setText("");
             operationField.setText("=");
         }
+        return false;
     }
+
     public boolean oneDotInNum(String number) {
         if (number.indexOf(".") == -1) {
             return false;
@@ -214,4 +255,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void theme(View view) {
+        Intent intent = new Intent(this, Theme_choice.class);
+        startActivity(intent);
+    }
 }

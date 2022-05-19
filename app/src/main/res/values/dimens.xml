@@ -5,5 +5,15 @@
     <dimen name="horizontal_margin_layout">8dp</dimen>
     <dimen name="land_field_size">450dp</dimen>
     <dimen name="entering_num_size">36sp</dimen>
-    <dimen name="operator_size">28sp</dimen>
+    <dimen name="operator_size">32sp</dimen>
+    <dimen name="btn_size">32sp</dimen>
+    <dimen name="btn_size2">26sp</dimen>
+    <dimen name="field_top_margin">52dp</dimen>
+    <dimen name="field_side_margin">8dp</dimen>
+    <dimen name="entering_num_size_land">34sp</dimen>
+    <dimen name="btn_size2_1">20dp</dimen>
+    <dimen name="operator_size_land">28sp</dimen>
+    <dimen name="margin_top_radio_btn_land">160dp</dimen>
+    <dimen name="margin_blue_radio_btn_land">80dp</dimen>
+    <dimen name="margin_top_radio_btn">440dp</dimen>
 </resources>

@@ -7,11 +7,12 @@
 
     <LinearLayout
         android:id="@+id/output_field"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/gradient_bg_fields_dark"
         android:gravity="center"
         android:orientation="vertical"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,32 +22,28 @@
             android:layout_width="@dimen/land_field_size"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/horizontal_margin_button"
-            android:background="@color/field_3_color_night"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/entering_num_size" />
+            android:textSize="@dimen/entering_num_size_land" />
 
         <TextView
             android:id="@+id/operation_field"
             android:layout_width="@dimen/land_field_size"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/horizontal_margin_button"
-            android:background="@color/field_2_color_night"
-
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/operator_size" />
+            android:textSize="@dimen/operator_size_land" />
 
         <EditText
             android:id="@+id/entry_field"
             android:layout_width="@dimen/land_field_size"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/horizontal_margin_button"
-            android:background="@color/field_1_color_night"
             android:inputType="number"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/entering_num_size"
+            android:textSize="@dimen/entering_num_size_land"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -54,14 +51,14 @@
         android:id="@+id/actions_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="vertical"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/input_field_2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/output_field">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_clear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -72,7 +69,7 @@
             android:text="@string/clear"
             app:cornerRadius="@dimen/button_corner_radius" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_backspace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -81,6 +78,18 @@
             android:backgroundTint="@color/num_button_color_night"
             android:onClick="clickNumber"
             android:text="@string/backspace"
+            app:cornerRadius="@dimen/button_corner_radius" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/horizontal_margin_button"
+            android:layout_weight="1"
+            android:backgroundTint="@color/field_2_color_night"
+            android:onClick="theme"
+            android:text="@string/theme"
+            android:textSize="@dimen/btn_size2_1"
             app:cornerRadius="@dimen/button_corner_radius" />
 
 
@@ -97,7 +106,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/output_field">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_seven"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -108,7 +117,7 @@
             android:text="@string/seven"
             app:cornerRadius="@dimen/button_corner_radius" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_eight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -119,7 +128,7 @@
             android:text="@string/eight"
             app:cornerRadius="@dimen/button_corner_radius" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_nine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -130,7 +139,7 @@
             android:text="@string/nine"
             app:cornerRadius="@dimen/button_corner_radius" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_division"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -155,7 +164,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/input_field_1">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_four"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -166,7 +175,7 @@
             android:text="@string/four"
             app:cornerRadius="@dimen/button_corner_radius" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_five"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -177,7 +186,7 @@
             android:text="@string/five"
             app:cornerRadius="@dimen/button_corner_radius" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_six"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -188,7 +197,7 @@
             android:text="@string/six"
             app:cornerRadius="@dimen/button_corner_radius" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_multiply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -213,7 +222,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/input_field_2">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -224,7 +233,7 @@
             android:text="@string/one"
             app:cornerRadius="@dimen/button_corner_radius" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -235,7 +244,7 @@
             android:text="@string/two"
             app:cornerRadius="@dimen/button_corner_radius" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_three"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -246,7 +255,7 @@
             android:text="@string/three"
             app:cornerRadius="@dimen/button_corner_radius" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_plus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -271,7 +280,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/input_field_3">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_zero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -282,7 +291,7 @@
             android:text="@string/zero"
             app:cornerRadius="@dimen/button_corner_radius" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_dot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -293,7 +302,7 @@
             android:text="@string/dot"
             app:cornerRadius="@dimen/button_corner_radius" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_equals"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -304,7 +313,7 @@
             android:text="@string/equals"
             app:cornerRadius="@dimen/button_corner_radius" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_minus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
