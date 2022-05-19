@@ -3,16 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/calc_background_2_vertical">
+    android:background="@drawable/calc_background_1_horizontal">
 
     <LinearLayout
         android:id="@+id/output_field"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/field_side_margin"
-        android:layout_marginTop="@dimen/field_top_margin"
-        android:layout_marginEnd="@dimen/field_side_margin"
-        android:background="@drawable/gradient_bg_fields_light"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/gradient_bg_fields_dark"
+        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,48 +19,44 @@
 
         <TextView
             android:id="@+id/result_field"
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/land_field_size"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/horizontal_margin_button"
-
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/entering_num_size" />
+            android:textSize="@dimen/entering_num_size_land" />
 
         <TextView
             android:id="@+id/operation_field"
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/land_field_size"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/horizontal_margin_button"
-
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/operator_size" />
+            android:textSize="@dimen/operator_size_land" />
 
         <EditText
             android:id="@+id/entry_field"
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/land_field_size"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/horizontal_margin_button"
-
-            android:fontFamily="@font/nova_square"
             android:inputType="number"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/entering_num_size"
+            android:textSize="@dimen/entering_num_size_land"
             android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/actions_field"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-
-        app:layout_constraintBottom_toTopOf="@id/input_field_1"
-        app:layout_constraintStart_toStartOf="@+id/input_field_1"
-        app:layout_constraintTop_toBottomOf="@id/output_field"
-        app:layout_constraintVertical_chainStyle="packed">
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/input_field_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/output_field">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_clear"
@@ -69,10 +64,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/num_button_color"
+            android:backgroundTint="@color/num_button_color_night"
             android:onClick="clickNumber"
             android:text="@string/clear"
-            android:textSize="@dimen/btn_size"
             app:cornerRadius="@dimen/button_corner_radius" />
 
         <com.google.android.material.button.MaterialButton
@@ -81,10 +75,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/num_button_color"
+            android:backgroundTint="@color/num_button_color_night"
             android:onClick="clickNumber"
             android:text="@string/backspace"
-            android:textSize="@dimen/btn_size"
             app:cornerRadius="@dimen/button_corner_radius" />
 
         <com.google.android.material.button.MaterialButton
@@ -93,10 +86,10 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/field_3_color"
+            android:backgroundTint="@color/field_2_color_night"
             android:onClick="theme"
             android:text="@string/theme"
-            android:textSize="@dimen/btn_size"
+            android:textSize="@dimen/btn_size2_1"
             app:cornerRadius="@dimen/button_corner_radius" />
 
 
@@ -104,16 +97,14 @@
 
     <LinearLayout
         android:id="@+id/input_field_1"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/horizontal_margin_layout"
         android:orientation="horizontal"
 
-        app:layout_constraintBottom_toTopOf="@id/input_field_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/actions_field"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintTop_toBottomOf="@+id/output_field">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_seven"
@@ -121,10 +112,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/num_button_color"
+            android:backgroundTint="@color/num_button_color_night"
             android:onClick="clickNumber"
             android:text="@string/seven"
-            android:textSize="@dimen/btn_size"
             app:cornerRadius="@dimen/button_corner_radius" />
 
         <com.google.android.material.button.MaterialButton
@@ -133,10 +123,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/num_button_color"
+            android:backgroundTint="@color/num_button_color_night"
             android:onClick="clickNumber"
             android:text="@string/eight"
-            android:textSize="@dimen/btn_size"
             app:cornerRadius="@dimen/button_corner_radius" />
 
         <com.google.android.material.button.MaterialButton
@@ -145,10 +134,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/num_button_color"
+            android:backgroundTint="@color/num_button_color_night"
             android:onClick="clickNumber"
             android:text="@string/nine"
-            android:textSize="@dimen/btn_size"
             app:cornerRadius="@dimen/button_corner_radius" />
 
         <com.google.android.material.button.MaterialButton
@@ -157,17 +145,16 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/operation_button_color"
+            android:backgroundTint="@color/operation_button_color_night"
             android:onClick="clickOperation"
             android:text="@string/division"
-            android:textSize="@dimen/btn_size"
             app:cornerRadius="@dimen/button_corner_radius" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/input_field_2"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/horizontal_margin_layout"
         android:orientation="horizontal"
@@ -183,10 +170,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/num_button_color"
+            android:backgroundTint="@color/num_button_color_night"
             android:onClick="clickNumber"
             android:text="@string/four"
-            android:textSize="@dimen/btn_size"
             app:cornerRadius="@dimen/button_corner_radius" />
 
         <com.google.android.material.button.MaterialButton
@@ -195,10 +181,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/num_button_color"
+            android:backgroundTint="@color/num_button_color_night"
             android:onClick="clickNumber"
             android:text="@string/five"
-            android:textSize="@dimen/btn_size"
             app:cornerRadius="@dimen/button_corner_radius" />
 
         <com.google.android.material.button.MaterialButton
@@ -207,10 +192,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/num_button_color"
+            android:backgroundTint="@color/num_button_color_night"
             android:onClick="clickNumber"
             android:text="@string/six"
-            android:textSize="@dimen/btn_size"
             app:cornerRadius="@dimen/button_corner_radius" />
 
         <com.google.android.material.button.MaterialButton
@@ -219,17 +203,16 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/operation_button_color"
+            android:backgroundTint="@color/operation_button_color_night"
             android:onClick="clickOperation"
             android:text="@string/multiply"
-            android:textSize="@dimen/btn_size"
             app:cornerRadius="@dimen/button_corner_radius" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/input_field_3"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/horizontal_margin_layout"
         android:orientation="horizontal"
@@ -245,10 +228,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/num_button_color"
+            android:backgroundTint="@color/num_button_color_night"
             android:onClick="clickNumber"
             android:text="@string/one"
-            android:textSize="@dimen/btn_size"
             app:cornerRadius="@dimen/button_corner_radius" />
 
         <com.google.android.material.button.MaterialButton
@@ -257,10 +239,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/num_button_color"
+            android:backgroundTint="@color/num_button_color_night"
             android:onClick="clickNumber"
             android:text="@string/two"
-            android:textSize="@dimen/btn_size"
             app:cornerRadius="@dimen/button_corner_radius" />
 
         <com.google.android.material.button.MaterialButton
@@ -269,10 +250,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/num_button_color"
+            android:backgroundTint="@color/num_button_color_night"
             android:onClick="clickNumber"
             android:text="@string/three"
-            android:textSize="@dimen/btn_size"
             app:cornerRadius="@dimen/button_corner_radius" />
 
         <com.google.android.material.button.MaterialButton
@@ -281,17 +261,16 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/operation_button_color"
+            android:backgroundTint="@color/operation_button_color_night"
             android:onClick="clickOperation"
             android:text="@string/plus"
-            android:textSize="@dimen/btn_size"
             app:cornerRadius="@dimen/button_corner_radius" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/input_field_4"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/horizontal_margin_layout"
         android:orientation="horizontal"
@@ -307,10 +286,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/num_button_color"
+            android:backgroundTint="@color/num_button_color_night"
             android:onClick="clickNumber"
             android:text="@string/zero"
-            android:textSize="@dimen/btn_size"
             app:cornerRadius="@dimen/button_corner_radius" />
 
         <com.google.android.material.button.MaterialButton
@@ -319,10 +297,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/num_button_color"
+            android:backgroundTint="@color/num_button_color_night"
             android:onClick="clickNumber"
             android:text="@string/dot"
-            android:textSize="@dimen/btn_size"
             app:cornerRadius="@dimen/button_corner_radius" />
 
         <com.google.android.material.button.MaterialButton
@@ -331,10 +308,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/operation_button_color"
+            android:backgroundTint="@color/operation_button_color_night"
             android:onClick="clickEquals"
             android:text="@string/equals"
-            android:textSize="@dimen/btn_size"
             app:cornerRadius="@dimen/button_corner_radius" />
 
         <com.google.android.material.button.MaterialButton
@@ -343,14 +319,12 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/horizontal_margin_button"
             android:layout_weight="1"
-            android:backgroundTint="@color/operation_button_color"
+            android:backgroundTint="@color/operation_button_color_night"
             android:onClick="clickOperation"
             android:text="@string/minus"
-            android:textSize="@dimen/btn_size"
             app:cornerRadius="@dimen/button_corner_radius" />
 
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

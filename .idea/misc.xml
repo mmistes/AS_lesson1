@@ -3,7 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Ilya/Desktop/GB/AS_lesson1/app/src/main/res/layout/activity_main.xml" value="0.3484375" />
+        <entry key="..\:/Users/Ilya/Desktop/GB/AS_lesson1/app/src/main/res/drawable/gradient_bg_fields.xml" value="0.328" />
+        <entry key="..\:/Users/Ilya/Desktop/GB/AS_lesson1/app/src/main/res/drawable/gradient_bg_fields_light.xml" value="0.328" />
+        <entry key="..\:/Users/Ilya/Desktop/GB/AS_lesson1/app/src/main/res/drawable/gradient_bh_fields_dark.xml" value="0.328" />
+        <entry key="..\:/Users/Ilya/Desktop/GB/AS_lesson1/app/src/main/res/layout-land-night/activity_main.xml" value="0.16300940438871472" />
+        <entry key="..\:/Users/Ilya/Desktop/GB/AS_lesson1/app/src/main/res/layout-land/activity_main.xml" value="0.3151041666666667" />
+        <entry key="..\:/Users/Ilya/Desktop/GB/AS_lesson1/app/src/main/res/layout-land/activity_main_landscape.xml" value="0.3151041666666667" />
+        <entry key="..\:/Users/Ilya/Desktop/GB/AS_lesson1/app/src/main/res/layout-land/activity_theme_choice.xml" value="0.33" />
+        <entry key="..\:/Users/Ilya/Desktop/GB/AS_lesson1/app/src/main/res/layout-night/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Ilya/Desktop/GB/AS_lesson1/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Ilya/Desktop/GB/AS_lesson1/app/src/main/res/layout/activity_theme_choice.xml" value="0.25" />
         <entry key="..\:/Users/Ilya/Desktop/GB/AS_lesson1/app/src/main/res/layout/main_layout.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Ilya/Desktop/GB/AS_lesson1/app/src/main/res/layout/second_activity.xml" value="0.36666666666666664" />
       </map>
